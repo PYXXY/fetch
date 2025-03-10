@@ -21,3 +21,25 @@ columns.forEach((title) => {
   yellowDiv.appendChild(blueDiv);
   container.appendChild(yellowDiv);
 });
+
+
+
+const requestURL = "http://127.0.0.1:5500/index.html"
+const request = async() => {
+    const response = await fetch(requestURL)
+    try {
+        if (!response.ok) {
+            throw new Error("Error fetching the data")
+        } else {
+            const convertor = await response .json()
+            console.log(convertor.items);
+            convertor.items.forEach(items => {
+                console.log("convertor", items);
+            });
+        }
+    } catch (error) {
+        console.error("Error has occured", error)
+    }
+
+}
+request()
