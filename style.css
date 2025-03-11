@@ -28,8 +28,31 @@ body{
 }
 
 .blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20vw;
     height: 60vh;
     margin-top: 20px;
     background-color: blue;
+}
+
+p{
+    display: inline-block;
+    color: white;
+}
+
+ol li{
+    display: list-item;
+    color: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-size: 13px;
+}
+
+ol{
+    max-width: 80%;
+    height: 90%;
 }
